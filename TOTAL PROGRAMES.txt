@@ -1,0 +1,1724 @@
+package first1;
+
+import java.util.ArrayList;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class iframe {
+
+	@SuppressWarnings("rawtypes")
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://demo.guru99.com/test/guru99home/");
+		driver.manage().window().maximize();
+		driver.switchTo().frame("a077aa5e");   //a077aa5e
+		
+		driver.findElement(By.xpath("/html/body/a/img")).click();
+		driver.switchTo().defaultContent();
+		String in=driver.findElement(By.xpath("(//h3[text()='All provided FREE!!!'])")).getText();
+		System.out.println(in);
+		String abc=driver.getTitle();
+		System.out.println(abc);
+		String out=driver.getCurrentUrl();
+		System.out.println(out);
+		
+		ArrayList tabs=new ArrayList(driver.getWindowHandles());
+		driver.switchTo().frame(8);
+		
+		
+		//String title=driver.getCurrentUrl();
+       //System.out.println(title);
+		
+		
+		
+	}}
+
+package first1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
+
+
+  public class fbtitle {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver Driver = new ChromeDriver();
+		
+		
+		Driver.get("https://www.facebook.com/");
+		Driver.manage().window().maximize();
+		
+		 Driver.findElement(By.id("email")).sendKeys("kalyanikankanala");
+		  Driver.findElement(By.id("pass")).sendKeys("hgghjj");
+		  Driver.findElement(By.name("login")).click();
+		 
+	}	  
+		 
+	}
+  
+
+package first1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
+ class fbdropdown {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver Driver = new ChromeDriver();
+		
+		Driver.get("https://www.facebook.com/");
+		Driver.manage().window().maximize();
+		
+		Thread.sleep(3000);
+		Driver.findElement(By.xpath("//*[@id=\"u_0_0_Xr\"]")).click();
+		Select Date = new Select(Driver.findElement(By.xpath("(//select[@id='day'])")));
+		Date.selectByVisibleText("6");
+		
+		Thread.sleep(3000);
+		
+		Select Month = new Select(Driver.findElement(By.xpath("(//select[@title='Month'])")));
+		Month.selectByIndex(8);
+		
+		Thread.sleep(3000);
+		
+		Select Year = new Select(Driver.findElement(By.xpath("(//select[@id='year'])")));
+		Year.selectByValue("2005");
+		
+		
+		
+	}
+ }
+
+		 package first1;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FindElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 
+			System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+			
+				driver.get("https://www.Amazon.in/");
+				driver.manage().window().maximize();
+			
+			List <WebElement> div=driver.findElements(By.tagName("a"));
+			int A=div.size();
+			System.out.println(A);
+			
+			for (int i=0; i<div.size(); i++) {
+				
+				System.out.println(div.get(i).getText());
+				
+				
+				
+			}
+			
+			
+			
+			//driver.close();
+		
+	}
+}
+
+
+
+package first1;
+
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+public class fbfor {
+
+	public static void main(String[] args)
+	{
+		//TODO Auto-generated method stub
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		 List<WebElement> one=driver.findElements(By.tagName("a"));
+		
+		int A=one.size();
+		
+		System.out.println(A);
+		int i=0;
+		//for(int i=0; i<one.size(); i++)
+		//while(i<one.size())
+		if(i<one.size())
+		
+		{
+			
+			System.out.println(one.get(i).getText());
+			
+		}
+		i++;
+				
+		
+	}
+
+}
+
+package first1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Upload_file {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://demo.guru99.com/test/upload/");
+		driver.manage().window().maximize();
+		
+		WebElement Upload=driver.findElement(By.xpath("(//input[@class='upload_txt'])"));
+		Upload.sendKeys("D:\\kalyani\\Testing\\abc.txt");
+		
+		driver.findElement(By.xpath("(//input[@id='terms'])")).click();
+		
+		driver.findElement(By.id("submitbutton")).click();
+		
+		
+	}
+
+	}
+
+
+package first1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class download {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		//driver.get("https://demo.guru99.com/test/yahoo.html");
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.codewithharry.com/notes/#google_vignette");
+		
+		driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/div[4]/div/div/div/a[2]/button")).click();
+		
+		
+	}
+}
+
+
+
+
+
+package first1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class load {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://demo.guru99.com/test/upload");
+		driver.manage().window().maximize();
+				
+		
+		
+		
+		WebElement load=driver.findElement(By.xpath("(//input[@type='file'])"));
+		load.sendKeys("D:\\kalyani\\Testing\\abc.txt");
+		
+		driver.findElement(By.xpath("(//input[@id='terms'])")).click();
+		driver.findElement(By.id("submitbutton")).click();
+	
+			
+		
+		
+		
+	}	
+
+	}
+
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>first</groupId>
+  <artifactId>first</artifactId>
+  <version>0.0.1-SNAPSHOT</version><!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
+
+<dependencies>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.7.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.2.3</version>
+</dependency>
+
+
+
+  </dependencies>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>17</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
+
+package first1;
+
+import java.sql.Driver;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class alert {
+
+	private static char[] alertMessage;
+
+	
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.demo.guru99.com/test/delete_customer.php");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.name("cusid")).sendKeys("123");
+		driver.findElement(By.name("submit")).click();
+		
+		
+		driver.switchTo().alert().accept();
+		Thread.sleep(4000);
+		driver.switchTo().alert().dismiss();
+		
+		//switch alert
+		//Alert alert = driver.switchTo().alert();
+		//capturing alert
+		//String alertMessage = driver.switchTo().alert().getText();
+	    //System.out.println(alertMessage);
+		
+		
+		//driver.switchTo().alert().getText();
+		//System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().dismiss();
+		System.out.println(driver.switchTo().alert().dismiss());
+			
+	}
+		
+		}	
+
+
+
+
+
+
+package first1;
+
+import java.util.ArrayList;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class amazon {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();	
+		 
+		
+		
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Realme");
+		  
+			
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		driver.get("https://www.amazon.in/Renewed-realme-Purple-Storage-Medium/dp/B09L74G4L1/ref=sr_1_1_sspa?keywords=Realme&qid=1670433115&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&smid=A2X11LN6JSH9IV&th=1");
+		
+		
+		driver.findElement(By.id("add-to-cart-button")).click();
+			
+
+	}
+
+}
+
+
+
+
+package first1;
+ 
+ import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
+
+  public class facebook {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		 
+		 
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver Driver = new ChromeDriver();
+		
+		
+		Driver.get("https://www.facebook.com/");
+		Driver.manage().window().maximize();
+		
+		
+		
+		 // Driver.findElement(By.id("email")).sendKeys("kalyanikankanala");
+		  //Driver.findElement(By.id("pass")).sendKeys("hgghjj");
+		  //Driver.findElement(By.name("login")).click();
+		 
+		  
+		Driver.findElement(By.xpath("(//a[@role='button'])[2]")).click();
+		Thread.sleep(4000);
+		
+		
+		Select Date = new Select(Driver.findElement(By.xpath("(//select[@id='day'])")));
+		Date.selectByVisibleText("10");
+		
+		Select Month = new Select(Driver.findElement(By.xpath("(//select[@id='month'])")));
+		Month.selectByIndex(3);
+		
+		Select Year = new Select(Driver.findElement(By.xpath("(//select[@id='year'])")));
+		Year.selectByValue("2000");
+		
+		
+	}
+  }
+		
+		
+        	package first1;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Realexcelfile {
+
+	public static void main(String[] args) throws IOException  {
+		// TODO Auto-generated method stub
+		
+		String excelpath =  "C:\\Users\\dell\\OneDrive\\Documents\\Employee id.xlsx";
+		FileInputStream inputstream = new FileInputStream(excelpath);
+		XSSFWorkbook workbook = new XSSFWorkbook(inputstream);
+		XSSFSheet sheet=workbook.getSheet("Employee id");
+		 
+		int rows = sheet.getLastRowNum();
+		int cols = sheet.getRow(1).getLastCellNum();
+		for(int r=0;r<=rows;r++) {
+			XSSFRow row = sheet.getRow(r);		
+		for(int c=0;c<cols;c++) {
+			XSSFCell cell = row.getCell(c);
+			switch(cell.getCellType())
+			{
+				case NUMERIC : System.out.println(cell.getNumericCellValue());
+				break;
+			    case STRING : System.out.println(cell.getStringCellValue());
+				break;
+				case BOOLEAN:System.out.println(cell.getBooleanCellValue());
+				break;
+			}
+			}
+			
+			}
+		
+		System.out.print("");
+
+	}
+			}
+
+	
+		
+package first1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
+ class fbdropdown {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver Driver = new ChromeDriver();
+		
+		Driver.get("https://www.facebook.com/");
+		Driver.manage().window().maximize();
+		
+		Thread.sleep(3000);
+		Driver.findElement(By.xpath("//*[@id=\"u_0_0_Xr\"]")).click();
+		Select Date = new Select(Driver.findElement(By.xpath("(//select[@id='day'])")));
+		Date.selectByVisibleText("6");
+		
+		Thread.sleep(3000);
+		
+		Select Month = new Select(Driver.findElement(By.xpath("(//select[@title='Month'])")));
+		Month.selectByIndex(8);
+		
+		Thread.sleep(3000);
+		
+		Select Year = new Select(Driver.findElement(By.xpath("(//select[@id='year'])")));
+		Year.selectByValue("2005");
+		
+		
+		
+	}
+ }
+
+
+
+
+
+package first1;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class popup {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.demo.guru99.com/test/delete_customer.php");
+		driver.manage().window().maximize();
+		driver.findElement(By.name("cusid")).sendKeys("123");
+		driver.findElement(By.xpath("(//input[@value='Submit'])")).click();
+		Alert popup=driver.switchTo().alert();
+		
+		popup.accept();
+		//popup.accept();
+		String popupacceptMessage = driver.switchTo().alert().getText();
+		System.out.println(popupacceptMessage);
+		
+		
+		
+		
+	}
+		
+		
+		
+
+	
+}
+
+
+
+
+
+
+package first1;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
+
+
+  public class fbtitle {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver Driver = new ChromeDriver();
+		
+		
+		Driver.get("https://www.facebook.com/");
+		Driver.manage().window().maximize();
+		
+		 Driver.findElement(By.id("email")).sendKeys("kalyanikankanala");
+		  Driver.findElement(By.id("pass")).sendKeys("hgghjj");
+		  Driver.findElement(By.name("login")).click();
+		 
+	}	  
+		 
+	}
+  
+		
+		package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class multipleproducts {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\\\\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("RAJAMANI");
+		driver.findElement(By.id("signInSubmit")).click();
+		Thread.sleep(4000);
+		
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("iphone");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("redmi9active");
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+        driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("oppo");
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		
+	
+        
+		//driver.findElement(By.id("add-to-cart-button")).click();	
+		}
+}
+		
+		
+	package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Headerlinks {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		
+		//driver.findElement(By.xpath("(//div[@id='nav-logo'])")).click();//amazon
+		//driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[2]")).click();//amazon minitv
+		//driver.findElement(By.xpath("(//span[@id='nav-global-location-data-modal-action'])")).click();//hello select your address
+		//driver.findElement(By.xpath("(//div[@class='nav-left'])[3]")).click();//all
+		//driver.findElement(By.xpath("//*[@id=\"nav-cart-text-container\"]/span[2]")).click();//cart
+		//driver.findElement(By.xpath("(//div[@id='nav-logo'])")).click();//amazon
+		//driver.findElement(By.xpath("(//div[@id='nav-search-dropdown-card'])")).click();//all
+		//driver.findElement(By.xpath("(//div[@class='nav-search-field '])")).click();//search
+		//driver.findElement(By.id("nav-search-submit-text")).click();//search click
+		//driver.findElement(By.xpath("(//span[@class='icp-nav-link-inner'])")).click();//english
+		//driver.findElement(By.xpath("(//a[text()='Become an Affiliate'])")).click();//footer affiliate
+		 // driver.findElement(By.xpath("(//a[text()='Advertise Your Products'])")).click();// 
+		  //driver.findElement(By.xpath("(//a[text()='Amazon Pay on Merchants'])")).click();
+		 // driver.findElement(By.xpath("(//a[text()='COVID-19 and Amazon'])")).click(); 
+		//driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")).click();
+		//driver.findElement(By.id("nav-orders")).click();
+		//driver.findElement(By.xpath("(//a[text()='Sell'])")).click();//sell
+		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.xpath("")).click();
+		
+		driver.findElement(By.xpath("")).click();
+			
+			//driver.findElement(By.xpath("")).click();//sell
+			//driver.findElement(By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[2]/a")).click();
+		Thread.sleep(2000);
+			
+			//driver.findElement(By.xpath("(//a[text()='Gift Cards'])")).click();
+			//driver.findElement(By.xpath("(//a[text()='Mobiles'])")).click();
+			//driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[2]")).click();
+			//driver.findElement(By.xpath("(//a[@class='nav-a  '])[4]")).click();
+			//driver.findElement(By.xpath("(//a[text()='Customer Service'])")).click();
+			//driver.findElement(By.xpath("(//a[text()=' Electronics '])")).click();//(//a[text()=' Electronics '])
+			//driver.findElement(By.xpath("//*[@id=\"nav-link-amazonprime\"]/span[1]")).click();
+			//driver.findElement(By.xpath("(//a[text()='Fashion'])")).click();
+		     // driver.findElement(By.xpath("(//a[text()='Home & Kitchen'])")).click();
+		     // driver.findElement(By.xpath("(//a[text()='New Releases'])")).click();
+			 // driver.findElement(By.xpath("(//a[text()='Amazon miniTV'])")).click();
+
+			 // driver.findElement(By.xpath("(//a[text()='Amazon Pay'])")).click();
+
+		}
+}
+		
+		
+		package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByName;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Registered {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("RAJAMANI");
+		driver.findElement(By.id("signInSubmit")).click();
+		Thread.sleep(4000);
+		
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Single cup");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		
+		driver.get("https://www.amazon.in/Dravizon-Stainless-Insulated-Reusable-Thermal/dp/B09Z8BY3DY/ref=sr_1_4_sspa?keywords=cups&qid=1671172688&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1");
+		
+		driver.findElement(By.id("add-to-cart-button")).click();
+        Thread.sleep(1000);
+		driver.findElement(By.name("proceedToRetailCheckout")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"orderSummaryPrimaryActionBtn\"]/span/input")).click();
+		}
+		
+		}
+		
+		
+		package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class guestregister {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("cups");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		
+		driver.get("https://www.amazon.in/Dravizon-Stainless-Insulated-Reusable-Thermal/dp/B09Z8BY3DY/ref=sr_1_4_sspa?keywords=cups&qid=1671172688&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1");
+		
+		driver.findElement(By.id("add-to-cart-button")).click();
+        Thread.sleep(1000);
+		driver.findElement(By.name("proceedToRetailCheckout")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("(//input[@class='a-button-input'])[2]")).click();
+		}
+}
+		
+	package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_001_createaccount {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		System.setProperty( "webdriver.chrome.driver","D:\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("createAccountSubmit")).click();
+		driver.findElement(By.xpath("(//input[@type='text'])")).sendKeys("kalpana");
+		
+		driver.findElement(By.id("ap_phone_number")).sendKeys("1254879612");
+		driver.findElement(By.id("ap_email")).sendKeys("fddgffhgjh@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("sdfhhjjk");
+		driver.findElement(By.id("continue")).click();	
+		
+		}
+}
+		
+		
+	package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_001_createaccount {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		System.setProperty( "webdriver.chrome.driver","D:\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id("createAccountSubmit")).click();
+		driver.findElement(By.xpath("(//input[@type='text'])")).sendKeys("kalpana");
+		
+		driver.findElement(By.id("ap_phone_number")).sendKeys("1254879612");
+		driver.findElement(By.id("ap_email")).sendKeys("fddgffhgjh@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("sdfhhjjk");
+		driver.findElement(By.id("continue")).click();
+		
+		}
+}
+		
+		
+	package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByName;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_02Registered  {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\\\\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("RAJAMANI");
+		driver.findElement(By.id("signInSubmit")).click();
+		Thread.sleep(4000);
+		
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Single cup");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		
+		driver.get("https://www.amazon.in/Dravizon-Stainless-Insulated-Reusable-Thermal/dp/B09Z8BY3DY/ref=sr_1_4_sspa?keywords=cups&qid=1671172688&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1");
+		
+		driver.findElement(By.id("add-to-cart-button")).click();
+        Thread.sleep(1000);
+		driver.findElement(By.name("proceedToRetailCheckout")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"orderSummaryPrimaryActionBtn\"]/span/input")).click();
+		
+		}
+}
+		
+		package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_03guestregister {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\\\\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("cups");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		
+		driver.get("https://www.amazon.in/Dravizon-Stainless-Insulated-Reusable-Thermal/dp/B09Z8BY3DY/ref=sr_1_4_sspa?keywords=cups&qid=1671172688&sr=8-4-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1");
+		
+		driver.findElement(By.id("add-to-cart-button")).click();
+        Thread.sleep(1000);
+		driver.findElement(By.name("proceedToRetailCheckout")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("(//input[@class='a-button-input'])[2]")).click();
+		
+		}
+}
+		
+		
+		package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_04Headerlinks {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+		System.setProperty( "webdriver.chrome.driver","D:\\\\\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		
+		//driver.findElement(By.xpath("(//div[@id='nav-logo'])")).click();//amazon logo
+		//driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[2]")).click();//amazon best sellers
+		//driver.findElement(By.xpath("(//span[@id='nav-global-location-data-modal-action'])")).click();//hello select your address
+		//driver.findElement(By.xpath("(//div[@class='nav-left'])[3]")).click();//All
+		//driver.findElement(By.xpath("//*[@id=\"nav-cart-text-container\"]/span[2]")).click();//cart
+		//driver.findElement(By.xpath("(//div[@id='nav-logo'])")).click();//amazon
+		//driver.findElement(By.xpath("(//div[@id='nav-search-dropdown-card'])")).click();//all
+		//driver.findElement(By.xpath("(//div[@class='nav-search-field '])")).click();//search space
+		//driver.findElement(By.id("nav-search-submit-text")).click();//search click
+		//driver.findElement(By.xpath("(//span[@class='icp-nav-link-inner'])")).click();//english
+		//driver.findElement(By.xpath("(//a[text()='Become an Affiliate'])")).click();//footer affiliate
+		 // driver.findElement(By.xpath("(//a[text()='Advertise Your Products'])")).click();// 
+		  //driver.findElement(By.xpath("(//a[text()='Amazon Pay on Merchants'])")).click();
+		 // driver.findElement(By.xpath("(//a[text()='COVID-19 and Amazon'])")).click(); 
+		//driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")).click();
+		//driver.findElement(By.id("nav-orders")).click();
+		//driver.findElement(By.xpath("(//a[text()='Sell'])")).click();//sell
+		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.xpath("")).click();
+		
+		driver.findElement(By.xpath("")).click();
+			
+			//driver.findElement(By.xpath("")).click();//sell
+			//driver.findElement(By.xpath("//*[@id=\"hmenu-content\"]/ul[1]/li[2]/a")).click();
+		Thread.sleep(2000);
+			
+			//driver.findElement(By.xpath("(//a[text()='Gift Cards'])")).click();
+			//driver.findElement(By.xpath("(//a[text()='Mobiles'])")).click();
+			//driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[2]")).click();
+			//driver.findElement(By.xpath("(//a[@class='nav-a  '])[4]")).click();
+			//driver.findElement(By.xpath("(//a[text()='Customer Service'])")).click();
+			driver.findElement(By.xpath(("(//a[text()=' Electronics '])"))).click();
+			//driver.findElement(By.xpath("//*[@id=\"nav-link-amazonprime\"]/span[1]")).click();
+			//driver.findElement(By.xpath("(//a[text()='Fashion'])")).click();
+		     // driver.findElement(By.xpath("(//a[text()='Home & Kitchen'])")).click();
+		     // driver.findElement(By.xpath("(//a[text()='New Releases'])")).click();
+			 // driver.findElement(By.xpath("(//a[text()='Amazon miniTV'])")).click();
+
+			 // driver.findElement(By.xpath("(//a[text()='Amazon Pay'])")).click();
+
+		}
+}
+		
+		package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_05footerlinks {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+
+		System.setProperty( "webdriver.chrome.driver","D:\\\\\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+		
+		  //driver.findElement(By.xpath("(//a[text()='Become an Affiliate'])")).click();
+		  // driver.findElement(By.xpath("(//a[text()='Advertise Your Products'])")).click(); 
+		  //driver.findElement(By.xpath("(//a[text()='Amazon Pay on Merchants'])")).click();
+		  // driver.findElement(By.xpath("(//a[text()='COVID-19 and Amazon'])")).click(); 
+		  //driver.findElement(By.xpath("(//a[text()='Your Account'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Returns Centre'])")).click(); 
+		  //driver.findElement(By.xpath("(//a[text()='100% Purchase Protection'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Amazon App Download'])")).click(); 
+		  //driver.findElement(By.xpath("(//a[text()='Amazon Assistant Download'])")).click();
+		Thread.sleep(3000);
+		 // driver.findElement(By.xpath("(//a[text()='Help'])")).click(); 
+		  //driver.findElement(By.xpath("(//a[text()='China'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='France'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Germany'])")).click(); 
+		  //driver.findElement(By.xpath("(//a[text()='Italy'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Netherlands'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Japan'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Mexico'])")).click();
+		
+		
+		 //driver.findElement(By.xpath("(//a[text()='Books'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='About Us'])")).click();
+		 // driver.findElement(By.xpath("(//a[text()='Sell on Amazon'])")).click();
+		  driver.findElement(By.xpath("//a[text()='Facebook']")).click();
+		 // driver.findElement(By.xpath("(//a[text()='Twitter']) ")).click();
+		 // driver.findElement(By.xpath("(//a[text()='Instagram'])")).click(); 
+		Thread.sleep(4000);
+		  
+		//driver.findElement(By.xpath("//a[text()='Amazon Science']")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Sell under Amazon Accelerator'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Protect and Build Your Brand'])")).click();
+		 // driver.findElement(By.xpath("(//a[text()='Amazon Global Selling'])")).click();
+		  
+		  //driver.findElement(By.xpath("(//a[text()='Fulfilment by Amazon'])")).click(); 
+		
+		//driver.findElement(By.xpath("(//a[text()='Poland'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Singapore'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Spain'])")).click();
+		  //driver.findElement(By.xpath("(//a[text()='Turkey'])")).click();
+	      //driver.findElement(By.xpath("(//a[text()='United Arab Emirates'])")).click();
+	      //driver.findElement(By.xpath("(//a[text()='United Kingdom'])")).click();
+	      //driver.findElement(By.xpath("(//a[text()='United States'])")).click();	
+	      //driver.findElement(By.xpath("(//a[text()='Canada'])")).click();
+		
+		}
+}
+package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Test_06compareprodu_price {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\\\chromedriver_win32 (4)\\chromedriver.exe");
+				
+				
+			
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("RAJAMANI");
+		driver.findElement(By.id("signInSubmit")).click();
+		
+		Thread.sleep(4000);
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("redmi 9active");
+		
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		Thread.sleep(3000);
+		
+		//driver.findElement(By.xpath("(//span[text()='Redmi 9 Activ - 4GB RAM | 5000 mAh Camera'])[2]")).click();
+		
+		driver.get("https://www.amazon.in/dp/B09GFM8CGS/ref=s9_acsd_al_bw_c2_x_0_i?pf_rd_m=A1K21FY43GMZF8&pf_rd_s=merchandised-search-2&pf_rd_r=3BMBRNJ4VVBE2DJFFBZ7&pf_rd_t=101&pf_rd_p=bb643976-0612-46ad-ad60-b71dd00f3032&pf_rd_i=27063182031&th=1");	
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("add-to-cart-button")).click();
+       
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("attach-accessory-cart-subtotal"));
+		String a =driver.findElement(By.id("attach-accessory-cart-subtotal")).getText();
+		System.out.println(a);
+		Thread.sleep(3000);
+		driver.findElement(By.id("attach-sidesheet-checkout-button")).click();
+		
+	   driver.findElement(By.xpath("(//td[@class='a-color-price a-size-medium a-text-right grand-total-price aok-nowrap a-text-bold a-nowrap'])"));
+	   String b =  driver.findElement(By.xpath("(//td[@class='a-color-price a-size-medium a-text-right grand-total-price aok-nowrap a-text-bold a-nowrap'])")).getText();
+	   System.out.println(b);
+		if(a==b)
+		{
+		System.out.println("both prices are same");
+		}
+		else
+		{
+			System.out.println("both prices are notsame");
+		}
+		}
+	}
+
+package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_07wishlist {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+	
+        driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("RAJAMANI");
+		driver.findElement(By.id("signInSubmit")).click();
+		Thread.sleep(4000);
+		
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("glass bowls");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		driver.get("https://www.amazon.in/Treo-Milton-Jelo-Designer-Glass/dp/B07VCL4668/ref=sr_1_1_sspa?crid=3TSA41SFJFEZ&keywords=glass%2Bbowls&qid=1671433384&sprefix=glass%2Bbowls%2Caps%2C832&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1");
+		  Thread.sleep(2000);
+		
+		driver.findElement(By.id("wishListDropDown")).click();
+		  Thread.sleep(2000);
+       driver.findElement(By.id("atwl-list-profile-image-3PNSSJ4V2GWXU")).click();
+       Thread.sleep(2000);
+       driver.findElement(By.xpath("(//a[text()='View Your List'])")).click();
+       Thread.sleep(2000);
+       driver.findElement(By.id("pab-declarative-I1KYX7SLVDVE47")).click();
+       Thread.sleep(2000);
+       driver.findElement(By.xpath("(//span[text()='Proceed to checkout'])")).click();
+       
+	}
+}
+	
+	package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_08multipleproducts {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\\\\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("RAJAMANI");
+		driver.findElement(By.id("signInSubmit")).click();
+		Thread.sleep(4000);
+		
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("iphone");
+		Thread.sleep(3000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		Thread.sleep(3000);
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("redmi9active");
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+        driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("oppo");
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		
+	
+        
+		//driver.findElement(By.id("add-to-cart-button")).click();	
+		}
+}
+		
+		
+	package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_09calculateordersummary {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+
+		System.setProperty( "webdriver.chrome.driver","D:\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("ap_password")).sendKeys("RAJAMANI");
+		driver.findElement(By.id("signInSubmit")).click();
+		
+        Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("CUPS");
+		
+		Thread.sleep(2000);
+
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+		Thread.sleep(2000);
+
+        driver.get("https://www.amazon.in/DVH-Sipper-Straw-Tumbler-Mug/dp/B0B721L7QH/ref=sr_1_3_sspa?crid=15PH3YDALHIDM&keywords=CUPS&qid=1671516362&sprefix=cups%2Caps%2C469&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1");
+		
+		driver.findElement(By.id("add-to-cart-button")).click();
+		Thread.sleep(2000);
+        driver.findElement(By.name("proceedToRetailCheckout")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("(//input[@aria-labelledby='shipToThisAddressButton-announce'])")).click();
+        Thread.sleep(6000);
+        driver.findElement(By.xpath(("(//div[@data-a-input-name='ppw-instrumentRowSelection'])[2]"))).click();
+        Thread.sleep(4000);
+       driver.findElement(By.xpath("(//span[text()='Choose an Option'])")).click();
+        Thread.sleep(6000);
+        driver.findElement(By.xpath("(//a[text()='ICICI Bank'])")).click();
+        Thread.sleep(6000);
+        driver.findElement(By.xpath("(//input[@class='a-button-input'])[2]")).click();
+        Thread.sleep(6000);
+        driver.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
+        Thread.sleep(6000);
+        //driver.findElement(By.xpath("(//input[@class='a-button-input'])[2]")).click();
+        
+        Thread.sleep(6000);
+        driver.findElement(By.xpath("(//tr[@class='small-line-height'])[1]")).click();
+         Thread.sleep(6000);
+        String a = driver.findElement(By.xpath("(//td[@class='a-text-right aok-nowrap a-nowrap'])[1]")).getText();
+        System.out.println(a);
+        Thread.sleep(6000);
+        driver.findElement(By.xpath("(//td[@class='a-text-right aok-nowrap a-nowrap'])[2]")).click();
+	    String b =  driver.findElement(By.xpath("(//td[@class='a-text-right aok-nowrap a-nowrap'])[2]")).getText();
+	    System.out.println(b);
+	    System.out.println(a+b);
+	    
+	    driver.findElement(By.xpath("//td[@class='a-color-price a-size-medium a-text-right grand-total-price aok-nowrap a-text-bold a-nowrap']")).click();
+	    String c =  driver.findElement(By.xpath("//td[@class='a-color-price a-size-medium a-text-right grand-total-price aok-nowrap a-text-bold a-nowrap']")).getText();
+	    System.out.println(c);
+	if(a+b==c)
+	{
+		System.out.println("the sum of two items is equal");
+		}
+	else
+	{
+		System.out.println("the sum of two items is not equal");
+	}
+	
+	
+	}
+		
+}
+		
+		package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test_10forgotpassword {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\\\\\\\\\\\\\\\chromedriver_win32 (4)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.Amazon.in/");
+		driver.manage().window().maximize();	
+		
+		driver.findElement(By.xpath("(//span[text()='Hello, sign in'])")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("ap_email")).sendKeys("9652593738");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.name("password")).sendKeys("krajamani");
+		driver.findElement(By.id("auth-fpp-link-bottom")).click();
+		
+		
+ }
+
+}
+
+		
+		pageinsite program
+
+	package newpackage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class pageinsight {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty( "webdriver.chrome.driver","D:\\\\chromedriver_win32 (4)\\chromedriver.exe");
+	    WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://pagespeed.web.dev/");
+		driver.manage().window().maximize();	
+		Thread.sleep(3000);
+			
+		driver.findElement(By.id("i2")).sendKeys("https://www.Amazon.in/");
+	    Thread.sleep(3000);	
+		driver.findElement(By.xpath("(//button[@jscontroller='soHxf'])[3]")).click();
+	    Thread.sleep(100000);	
+	    driver.findElement(By.xpath("(//div[@aria-level='2'])[1]"));
+	    Thread.sleep(20000);
+	    String a = driver.findElement(By.xpath("(//div[@aria-level='2'])[1]")).getText();
+	   Thread.sleep(20000);	
+	    System.out.println(a);
+	    Thread.sleep(20000);	
+	    driver.findElement(By.xpath("(//span[@jsname='ksKsZd'])[2]")).click(); 
+	    Thread.sleep(20000);	
+	    driver.findElement(By.xpath("(//div[@aria-level='2'])[5]"));
+	    Thread.sleep(20000);
+	    String b= driver.findElement(By.xpath("(//div[@aria-level='2'])[5]")).getText();
+	    Thread.sleep(20000);	
+	    System.out.println(b);
+	    
+	    Thread.sleep(40000);
+	    
+	   if(a==b)
+	   {
+		   System.out.println("equal");
+	   }
+	   else
+	   {
+		   System.out.println(" not equal");
+	   }
+	   
+	   }
+
+	}
+
+
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+
+	
+
+
+
+
+		
+		
+	
+
+   
+
+		
+		
+		
+		
+		
+	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+	
+		
+
+	
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+
+
+            
+
+
+
+           		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		 
+		  
+		  
+
+		  
+		  
+
+
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+			
+			
+			
+		
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	
+
+
+ 
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+
+
+
+

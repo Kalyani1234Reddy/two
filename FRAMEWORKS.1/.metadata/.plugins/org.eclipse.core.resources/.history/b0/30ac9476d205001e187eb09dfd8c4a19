@@ -1,0 +1,167 @@
+package TestComponent.gold;
+
+
+import java.io.File;
+import java.net.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.apache.poi.hssf.record.PageBreakRecord.Break;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+import TestLib.Automation_properties;
+import TestLib.Common;
+import TestLib.Common.SelectBy;
+import TestLib.Sync;
+import Utilities.ExcelReader;
+import Utilities.ExtenantReportUtils;
+import Utilities.Utils;
+import Utilities.xmlReader;
+
+public class goldhelper {
+	
+
+	String datafile;
+	ExcelReader excelData;
+	Map<String, Map<String, String>> data=new HashMap<>();
+	static ExtenantReportUtils report;
+	static Automation_properties automation_properties = Automation_properties.getInstance();
+public goldhelper(String datafile){
+	
+	excelData=new ExcelReader(datafile);
+	data=excelData.getExcelValue();
+	this.data=data;
+	if(Utilities.TestListener.report==null)
+	{
+		report=new ExtenantReportUtils("Hydro");
+		report.createTestcase("HydroTestCases");
+	}else{
+		this.report=Utilities.TestListener.report;
+	}
+
+	
+}
+
+
+public void verifyingHomePage(){
+	try{
+		Thread.sleep(5000);
+	
+String expectedResult = "User should land on the home page";
+		
+		
+		int size =Common.findElements("xpath", "//a[@class='a-logo']").size();
+		Common.assertionCheckwithReport(size > 0, " verifying the home page", expectedResult,"Successfully landed on the home page", "User unabel to land on home page");
+	
+}
+	catch(Exception |Error e) {
+	     
+			ExtenantReportUtils.addFailedLog("verifying the homepage","navigate the home page", "user successfully navigate the home page", Common.getscreenShotPathforReport("failedtohomepage"));
+			Assert.fail();
+		}
+}
+	public void close_popup() {
+		try{
+			Thread.sleep(5000);	
+			Common.refreshpage();
+		   
+			Common.clickElement("xpath", "(//span[text()='Close'])[3]");
+			Sync.waitElementPresent("id", "button3");
+			Common.clickElement("id", "button3");
+			Common.clickElement("id", "truste-consent-button");
+			
+			/*Common.assertionCheckwithReport(Common.getPageTitle().contains("Hydro Flask | Vacuum Insulated Stainless Steel Water Bottles"),
+					"verifying popup", "User navigate to homepagepopup",
+					"user successfully close the Homepage popup", "user failed to close the popup");*/
+		
+	}
+		catch(Exception |Error e) {
+		     
+			//ExtenantReportUtils.addFailedLog("verifying the homepagepopup","navigate the home pagepopup", "user successfully navigate the home pagepopup", Common.getscreenShotPathforReport("failedtohomepagepopup"));
+			//Assert.fail();
+		}
+}
+	
+public void clickonshop() throws InterruptedException {
+	
+		Thread.sleep(3000);
+		//Sync.waitElementPresent("xpath", "(//a[@role='button'])[1]");
+		Common.clickElement("xpath", "(//a[@role='button'])[1]");
+		//Sync.waitElementPresent("xpath", "(//a[@class='ui-corner-all'])[1]");
+		Common.clickElement("xpath", "(//a[@class='ui-corner-all'])[1]");
+		//Sync.waitElementPresent("xpath", "(//a[@class='ui-corner-all'])[2]");
+		Common.clickElement("xpath", "(//a[@class='ui-corner-all'])[2]");
+		//Sync.waitElementPresent("id", "button3");
+//	//	Common.clickElement("id", "button3");
+//		Common.clickElement("xpath", "(//a[@role='button'])[1]");
+//		Common.clickElement("xpath", "(//a[@class='ui-corner-all'])[1]");
+//		Common.clickElement("xpath", "(//a[@class='ui-corner-all'])[2]");
+		//Common.clickElement("xpath","//button[text()='Accept All']");
+		Thread.sleep(8000);
+		
+		Common.clickElement("xpath","(//img[@class='m-product-card__image product-image-photo lazy loaded'])[2]");
+		//Common.assertionCheckwithReport(Common.getPageTitle().equals("Insulated & Stainless Steel Water Bottles | Hydro Flask"),
+//		"verifying product", "User navigate to pdp product",
+//		"user successfully land on pdp product page ", "user failed to click the plp product");
+//
+//}
+//catch(Exception |Error e) {
+//     
+//	ExtenantReportUtils.addFailedLog("verifying the product page","navigate the pdp page", "user successfully navigate the product pdppage", Common.getscreenShotPathforReport("passed to plpproduct"));
+//	Assert.fail();
+}
+
+public void colourboxes() throws InterruptedException {
+	clickonshop();
+	try {
+	
+	
+		Thread.sleep(8000);
+		
+	for(int i=0;i<=11;i++)
+	{	
+		//Common.clickElement("xpath", "(//div[@role='radio'])");
+		Common.isElementPresent("xpath", "(//div[@role='radio'])").get(i).click();
+		Thread.sleep(8000);
+		
+	}
+	String Title=Common.getPageTitle();
+	Common.assertionCheckwithReport(Title.contains("32 oz Water Bottle - Wide Mouth"), "display the select colour", "should display the select colour", "successfully select colours", Common.getscreenShotPathforReport("successfully select colours"));
+	}
+	
+	catch(Exception |Error e) {
+	     
+		ExtenantReportUtils.addFailedLog("failed to the colors","", "user successfully navigate the product pdppage", Common.getscreenShotPathforReport("failedtopdpproduct"));
+		Assert.fail();
+	}
+	}
+	}
+	
+

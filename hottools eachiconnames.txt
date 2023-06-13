@@ -1,0 +1,42 @@
+Free shipping for orders over $70------>header callout
+Hottools block------>header wrapper inner
+Search,minicart------>headerlink icons
+Toggle Nav----->Menu
+Hot Tools---->logo
+Hair tools---->level-top ui-corner-all
+Collections----->level0 nav-2 level-top ui-corner-all
+One-step product----->level0 nav-3 level-top ui-menu-item
+Tutorials------>level0 nav-4 last level-top ui-menu-item
+Search icon----->search link warp
+Account icon---->account-link top-link
+Minicart icon---->showcart minilink
+SHOPPING BAG----->page title wrapper
+Hmm. Looks like your bag is empty.
+<p>Hmm. Looks like your bag is empty.</p>
+STAY UPDATED---->
+Enter your email address----->field newsletter has-floating(field set)
+Join----->Button action subscribe primary
+Error: The field "Enter your email address" is required------>newsletter-error
+Hottools---->footer content
+About hot tools---->footer-links-title
+About Us
+Careers
+Become an Influencer
+Stylist Program------->footer-links-content
+Our products----->footer-links-title
+Registration
+Warranty
+Warranty FAQs
+FAQs--------->footer-links-content
+Customer service------>footer-links-title
+Contact Us
+Help & FAQs
+Order Status
+Returns & Refunds
+Distributor Login------>footer-links-content
+Lets be friends----->footer-links-column footer-social-column
+Facebook------->Like Us On Facebook 
+Instagram----->Check Us Out On Instagram
+Twitter-----> Follow Us On Twitter
+Youtube------>YouTube
+ Pinterest---->title Pinterest

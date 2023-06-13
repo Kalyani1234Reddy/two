@@ -1,0 +1,11 @@
+mvn clean install -PAutomation -DtestNG=GoldHF_ST_Regression_NonCheckouts.xml -DconfigFile=Hydroflask\config.properties
+
+
+mvn clean install -PAutomation -DtestNG=hottoolss/TestNG.xml -DconfigFile=hottools_config/config.properties
+
+
+
+mvn clean install -PAutomation -DtestNG=DryBar/Drybar.xml -DconfigFile=DryBar/config.properties
+
+
+C:\Users\dell\Downloads\HoT-digital (1)\HoT-digital\TestLogs\Download\apache-maven-3.9.1-bin\apache-maven-3.9.1

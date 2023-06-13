@@ -1,0 +1,15 @@
+Kalyani      23/05/2023
+
+Manual Testing on Android Chrome - Hydroflask pre-prod environment
+
+* home/bottles &drinkware/bottles---->lowest price and all are overlapping.
+* In homepage Explore categeory------>Text is closure to appear.
+* home/bottles&drinkware/bundles--->colour option boxes 2 available.double click only it will tick..when it removes after single click only it will tick. 
+* home/bottles&drinkware/bottles--->bundle test product image is not displaying.
+* home/bottles&drinkware/waterbottles----->price is not in between order(filter is not working).
+* home/bottles&drinkware/waterbottles----->In colour checkbox when i click on whitecolor it will reduce the color option checkboxes.when it will remove click(tickmark) it will enlarge       color options.
+* home/customize----->20 oz AllcuAround Tumbler product image is not displaying when i click on indigo colour.when i click on black&white color the image is displaying.
+*  home/customize----->lowest price is not an order(12 0z kids wide mouth w/straw lid)
+* home/bottles&drinkware/bundles---->goji bundle image is not displaying.
+* home/featured/new Arrivals----->price is not in between order(filter is not working).
+* In all categeories sorting option is overlapping.

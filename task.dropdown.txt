@@ -1,0 +1,466 @@
+GitHub Repo: https://github.com/AutomateThePlanet/LambdaTest-Selenium4-Java-Tutorial/tree/main/chapter13-email-testing----->SEND EMAIL BEFORE AND AFTER EXECUTION SELINIUM JAVA----LINK
+
+import javax.mail.*;
+import javax.mail.internet.*;
+import java.util.Properties;
+
+public class EmailNotification {
+
+    public static void main(String[] args) {
+
+        // Before Test Execution Email
+        sendEmail("Before Test Execution");
+
+        // Execute Selenium Test Script here
+
+        // After Test Execution Email
+        sendEmail("After Test Execution");
+    }
+
+    public static void sendEmail(String message) {
+
+        final String username = "your-email-username";
+        final String password = "your-email-password";
+        final String recipient = "recipient-email-address";
+        final String subject = "Selenium Test Script Notification";
+
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(username, password);
+            }
+        });
+
+        try {
+            Message emailMessage = new MimeMessage(session);
+            emailMessage.setFrom(new InternetAddress(username));
+            emailMessage.setRecipients(Message.RecipientType.TO, InternetAddress.parse(recipient));
+            emailMessage.setSubject(subject);
+            emailMessage.setText(message);
+
+            Transport.send(emailMessage);
+
+            System.out.println("Email Sent Successfully!");
+        } catch (MessagingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CreateAccounts {
+
+  public static void main(String[] args) {
+    // Set the path of the chrome driver
+    System.setProperty("webdriver.chrome.driver", "path/to/chrome/driver");
+
+    // Launch the chrome browser
+    WebDriver driver = new ChromeDriver();
+
+    // Navigate to the website
+    driver.get("https://example.com/signup");
+
+    // Create 5 accounts
+    for (int i = 1; i <= 5; i++) {
+      // Enter the name
+      WebElement nameField = driver.findElement(By.id("name"));
+      nameField.sendKeys("User " + i);
+
+      // Enter the email address
+      WebElement emailField = driver.findElement(By.id("email"));
+      emailField.sendKeys("user" + i + "@example.com");
+
+      // Enter the password
+      WebElement passwordField = driver.findElement(By.id("password"));
+      passwordField.sendKeys("password" + i);
+
+      // Submit the form to create the account
+      WebElement submitButton = driver.findElement(By.id("submit"));
+      submitButton.click();
+    }
+
+    // Close the browser
+    driver.quit();
+  }
+
+}
+
+
+
+
+package newpackage;
+
+import java.util.Properties;
+
+import javax.mail.Message;
+
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class firefox {
+
+	public static void main(String[] args) throws MessagingException {
+		// TODO Auto-generated method 
+		        // Set up email settings
+		        String host = "pranithsaivelishoju.gmail.com";
+		        String username = "pranithsaivelishoju@gmail.com";
+		        String password = "9949914600";
+		        String from = "pranithsaivelishoju@gmail.com";
+		        String to = "kalyanireddykankanala16@gmail.com";
+		        Properties properties = System.getProperties();
+		        properties.put("mail.smtp.host", host);
+		        properties.put("mail.smtp.port", "465");
+		        properties.put("mail.smtp.ssl.enable", "true");
+		        properties.put("mail.smtp.auth", "true");
+		        properties.put("mail.smtp.starttls.enable", "true");
+		        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+		            protected PasswordAuthentication getPasswordAuthentication() {
+		
+		         return new PasswordAuthentication(username, password);
+		            }
+		        });
+
+		        // Create a new message
+		        MimeMessage message = new MimeMessage(session);
+		        message.setFrom(new InternetAddress(from));
+		        message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+		        // Create a new ChromeDriver instance
+		        System.setProperty("webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
+				ChromeOptions options=new ChromeOptions();
+				options.addArguments("--remote-allow-origins=*");
+				 WebDriver driver = new ChromeDriver(options);
+
+		        // Send email before execution
+		        message.setSubject("Test Script Execution: Start");
+		        message.setText("Test script execution will begin now.");
+		        Transport.send(message);
+
+		        // Execute test script here	        
+
+		        // Send email after execution
+		        message.setSubject("Test Script Execution: End");
+		        message.setText("Test script execution has ended.");
+		        Transport.send(message);
+
+		        // Quit the driver
+		       driver.quit();
+		    }	}
+
+
+
+
+
+
+ public T setAndroidProcess(String processName) {
+    Require.nonNull("Android process name", processName);
+    return setAndroidCapability("androidProcess", processName);
+  }
+
+  private T setAndroidCapability(String name, Object value) {
+    Require.nonNull("Name", name);
+    Require.nonNull("Value", value);
+    Map<String, Object> newOptions = new TreeMap<>(androidOptions);
+    newOptions.put(name, value);
+    androidOptions = Collections.unmodifiableMap(newOptions);
+    return (T) this;
+  }
+
+  @Override
+  protected Set<String> getExtraCapabilityNames() {
+    return Collections.singleton(capabilityName);
+  }
+
+  @Override
+  protected Object getExtraCapability(String capabilityName) {
+    Require.nonNull("Capability name", capabilityName);
+    if (!this.capabilityName.equals(capabilityName)) {
+      return null;
+    }
+
+    Map<String, Object> options = new TreeMap<>();
+    experimentalOptions.forEach(options::put);
+
+    if (binary != null) {
+      options.put("binary", binary);
+    }
+
+    options.put("args", unmodifiableList(new ArrayList<>(args)));
+
+    options.put(
+      "extensions",
+      unmodifiableList(Stream.concat(
+        extensionFiles.stream()
+          .map(file -> {
+            try {
+              return Base64.getEncoder().encodeToString(Files.readAllBytes(file.toPath()));
+            } catch (IOException e) {
+              throw new SessionNotCreatedException(e.getMessage(), e);
+            }
+          }),
+        extensions.stream()
+      ).collect(toList())));
+
+    options.putAll(androidOptions);
+
+    return unmodifiableMap(options);
+  }
+
+  protected void mergeInPlace(Capabilities capabilities) {
+    Require.nonNull("Capabilities to merge", capabilities);
+
+    capabilities.getCapabilityNames().forEach(name -> setCapability(name, capabilities.getCapability(name)));
+    if (capabilities instanceof ChromiumOptions) {
+      ChromiumOptions<?> options = (ChromiumOptions<?>) capabilities;
+      for (String arg : options.args) {
+        if (!args.contains(arg)) {
+          addArguments(arg);
+        }
+      }
+      addExtensions(options.extensionFiles);
+      addEncodedExtensions(options.extensions);
+      if (options.binary != null) {
+        setBinary(options.binary);
+      }
+      options.experimentalOptions.forEach(this::setExperimentalOption);
+    }
+  }
+
+  protected void mergeInOptionsFromCaps(String capabilityName, Capabilities capabilities) {
+    if (!(capabilities instanceof ChromiumOptions)) {
+      Object object = capabilities.getCapability(capabilityName);
+
+      if (object instanceof Map) {
+        @SuppressWarnings("unchecked") Map<String, Object> options = (Map<String, Object>) object;
+
+        @SuppressWarnings("unchecked") List<String>
+          arguments =
+          (List<String>) (options.getOrDefault("args", new HashMap<>()));
+        @SuppressWarnings("unchecked") List<Object> extensionList =
+          (List<Object>) (options.getOrDefault("extensions", new ArrayList<>()));
+
+        arguments.forEach(arg -> {
+          if (!args.contains(arg)) {
+            addArguments(arg);
+          }
+        });
+
+        extensionList.forEach(extension -> {
+          if (!extensions.contains(extension)) {
+            if (extension instanceof File) {
+              addExtensions((File) extension);
+            } else if (extension instanceof String) {
+              addEncodedExtensions((String) extension);
+            }
+          }
+        });
+
+        Object binary = options.get("binary");
+        if (binary instanceof String) {
+          setBinary((String) binary);
+        } else if (binary instanceof File) {
+          setBinary((File) binary);
+        }
+
+        options.forEach((k, v) -> {
+          if (!k.equals("binary") && !k.equals("extensions") && !k.equals("args")) {
+            setExperimentalOption(k, v);
+          }
+        });
+      }
+    }
+  }
+}
+
+
+
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class Fb_login_multiple_users {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.Chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		ChromeDriver driver = new ChromeDriver(options);
+       // WebDriver driver = new ChromeDriver();
+				String[][] arr = { {"babby","123456"},{"gunnu","789456"},{"anu","456123"} };
+					for (int i = 0; i < arr.length; i++) {
+			          
+						Thread.sleep(3000);
+
+			            driver.get("https://www.facebook.com/");
+			            driver.manage().window().maximize();
+			            
+			  
+			            WebElement email = driver.findElement(By.id("email"));
+			            WebElement password = driver.findElement(By.id("pass"));
+			            
+			           
+			            email.sendKeys(arr[i][0]);
+			            password.sendKeys(arr[i][1]);
+			            
+			         
+			            WebElement loginButton = driver.findElement(By.xpath("//button[@name='login']")).click();
+			           
+			            
+			            Thread.sleep(3000);
+			            driver.findElement(By.xpath("(//a[@role='button'])[2]")).click();
+			             
+					
+				}          
+		            
+					Thread.sleep(3000);
+					driver.close();
+		        }
+		        		}
+
+
+
+
+
+
+package newpackage;
+
+import java.util.Properties;
+
+import javax.mail.Message;
+
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class firefox {
+
+	public static void main(String[] args) throws MessagingException {
+		// TODO Auto-generated method 
+		        // Set up email settings
+		        String host = "pranithsaivelishoju.gmail.com";
+		        String username = "pranithsaivelishoju@gmail.com";
+		        String password = "9949914600";
+		        String from = "pranithsaivelishoju@gmail.com";
+		        String to = "kalyanireddykankanala16@gmail.com";
+		        Properties properties = System.getProperties();
+		        properties.put("mail.smtp.host", host);
+		        properties.put("mail.smtp.port", "465");
+		        properties.put("mail.smtp.ssl.enable", "true");
+		        properties.put("mail.smtp.auth", "true");
+		        properties.put("mail.smtp.starttls.enable", "true");
+		        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+		            protected PasswordAuthentication getPasswordAuthentication() {
+		
+		         return new PasswordAuthentication(username, password);
+		            }
+		        });
+
+		        // Create a new message
+		        MimeMessage message = new MimeMessage(session);
+		        message.setFrom(new InternetAddress(from));
+		        message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+		        // Create a new ChromeDriver instance
+		        System.setProperty("webdriver.chrome.driver","C:\\Users\\dell\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
+				ChromeOptions options=new ChromeOptions();
+				options.addArguments("--remote-allow-origins=*");
+				 WebDriver driver = new ChromeDriver(options);
+
+		        // Send email before execution
+		        message.setSubject("Test Script Execution: Start");
+		        message.setText("Test script execution will begin now.");
+		        Transport.send(message);
+
+		        // Execute test script here	        
+
+		        // Send email after execution
+		        message.setSubject("Test Script Execution: End");
+		        message.setText("Test script execution has ended.");
+		        Transport.send(message);
+
+		        // Quit the driver
+		       driver.quit();
+		    }	}
+
+
+windowhandles code
+System.setProperty("webdriver.chrome.driver","Path to the driver"); 
+WebDriver driver = new ChromeDriver();
+
+driver.manage().window().maximize();
+
+// Load the website
+driver.get("http://www.naukri.com/");
+
+// It will return the parent window name as a String
+String parent=driver.getWindowHandle();
+
+Set<String>s=driver.getWindowHandles();
+
+// Now iterate using Iterator
+Iterator<String> I1= s.iterator();
+
+while(I1.hasNext())
+{
+
+String child_window=I1.next();
+
+
+if(!parent.equals(child_window))
+{
+driver.switchTo().window(child_window);
+
+System.out.println(driver.switchTo().window(child_window).getTitle());
+
+driver.close();
+}
+
+
+public void myaccount(String dataSet) throws Exception {
+		try {	
+		Common.refreshpage();
+	    Thread.sleep(1000);
+		Common.clickElement("xpath", "(//button[@class='button3'])");//pop-up
+		 Common.textBoxInput("id", "email", data.get(dataSet).get("UserName"));
+        Common.textBoxInput("id", "pass", data.get(dataSet).get("password"));
+       Common.textBoxInput("xpath", "value", data.get(DataSet).get(""));
+		
+	}
+	catch(Exception |Error e) {
+		   
+		ExtenantReportUtils.addFailedLog("verifying add to cart button", "User click add to card button", "user faield to click add to cart button", Common.getscreenShotPathforReport("faieldtoclickbutton"));
+		Assert.fail();
+		e.printStackTrace();
+	}
+	}

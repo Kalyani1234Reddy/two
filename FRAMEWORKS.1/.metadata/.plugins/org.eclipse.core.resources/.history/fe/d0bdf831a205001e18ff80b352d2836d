@@ -1,0 +1,49 @@
+package TestExecute.gold;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import TestComponent.braun.BraunHelper;
+import TestComponent.gold.goldhelper;
+import TestLib.Login;
+
+public class goldtest {
+	String datafile = "gold\\gold.xlsx";	
+	goldhelper gold=new goldhelper (datafile);
+	
+	 
+	@Test
+	public void goldtestcases() throws Exception {
+
+		try {
+			gold.verifyingHomePage();
+			gold.close_popup();
+			gold.clickonshop();
+			gold.colourboxes();
+			
+			
+			
+			
+		}
+		catch (Exception e) {
+			
+			Assert.fail(e.getMessage(), e);
+		} 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@BeforeMethod
+	  public void startTest() throws Exception {
+		 System.setProperty("configFile", "gold\\config.properties");
+		  Login.signIn();
+		  
+	  }
+}

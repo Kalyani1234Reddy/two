@@ -1,0 +1,62 @@
+Ajio----->(//div[@class='logo-float undefined'])
+Men------>(//a[text()='MEN'])
+Women----->(//a[text()='WOMEN'])
+Kids------->(//a[text()='KIDS'])
+Indie------>(//a[text()='INDIE'])
+Home and kitchen----->(//a[text()='HOME AND KITCHEN'])
+Search------->(//input[@placeholder='Search AJIO'])
+symbol------->(//img[@alt='wishlistIcon'])
+lock--------->(//div[@class='ic-cart '])
+login--------->(//span[@class='  login-form login-modal'])
+Customer care------->(//a[text()='Customer Care'])[1]
+Visit ajioluxe------->(//a[text()='Visit AJIOLUXE'])
+Categeories---------->(//a[text()='CATEGORIES'])[1]
+Brands--------->(//a[text()='BRANDS'])[1]
+100%geninune&super fast delivery------->(//img[@name='main-banner'])[10]
+Mobikwik & up to-------->(//img[@name='main-banner'])[13]
+Rewards all yours------->(//img[@name='main-banner'])[16]
+shop&earn------>//*[@id="appContainer"]/div[2]/div/div[1]/div[5]/div/div/div/div[2]/div/a[2]
+Invite your friends Ajio------>//*[@id="appContainer"]/div[2]/div/div[1]/div[5]/div/div/div/div[3]/div/a[2]
+100% Handpicked------->(//span[text()='100% HANDPICKED'])
+Assured quality------->(//span[text()='ASSURED QUALITY'])
+Easy Exchange-------->(//span[text()='EASY EXCHANGE'])
+Help------>(//div[text()='Help'])
+Who we are----->(//a[text()='Who We Are'])
+Join our team---->(//a[text()='Join Our Team'])
+Terms&conditions------>(//a[text()='Terms & Conditions'])
+We respect your privacy---->(//a[text()='We Respect Your Privacy'])
+Fees&payments---->(//a[text()='Fees & Payments'])
+Returns&Refunds---->(//a[text()='Returns & Refunds Policy'])
+Protions&terms conditions--->(//a[text()='Promotions Terms & Conditions'])
+Track your order----->(//a[text()='Track Your Order'])
+Frequently asked questions---->(//a[text()='Frequently Asked Questions'])
+Returns----->(//a[text()='Returns'])
+Cancellation---->(//a[text()='Cancellations'])
+Payments---->(//a[text()='Payments'])
+Customer care---->(//a[text()='Customer Care'])[2]
+How to redeem my coupon---->(//a[text()='How Do I Redeem My Coupon'])
+Stores----->(//a[text()='Stores'])
+New Arrivals--->(//a[text()='New Arrivals'])
+Brand Dictionary----->(//a[text()='Brand Directory'])
+Home--->(//a[text()='Home'])
+Collections----->(//a[text()='Collections'])
+Payment Methods---->(//div[text()='Payment Methods'])
+Netbanking---->(//span[@class='ic-netbank'])
+Verified By visa----->(//span[@class='ic-visa'])
+Master Card----->(//span[@class='ic-mastercard'])
+Cash on delivery------->(//span[@class='ic-cod'])
+JIo-Money---->(//span[@class='ic-jiomoney'])
+ssl----->(//span[@class='ic-ssl'])
+
+fb,instagram,youtube,twitter symbols---->Article links.
+emil----->News letter subscription.
+
+
+
+
+
+
+
+
+
+

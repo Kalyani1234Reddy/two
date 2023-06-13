@@ -1,0 +1,288 @@
+ ANDROID IN CHROME:OXO
+
+CHECKED ALL THE FOOTER LINKS LINKS.
+CHECKED ALL THE HEADER LINKS.
+CHATBOX IS VERIFIED.
+SORTING PRICE IS VERIFIED.
+COLOURS IS VERIFIED.
+CREATE ACCOUNT IS VERIFIED.
+FORGOTPASSWORD/CHANGE PASSWORD IS VERIFIED.
+PLACE ORDER FOR PLP & PDP PAGES--->IN EACH ONE PRODUCT ADD TO CART IS DONE.
+CATEGEORIES AND SUBCATEGEORIES IS VERIFIED.
+NEWSLETTER SUBSCRIPTION IS VERIFIED.
+COUNTRY SELECTION IS VERIFIED. 
+
+
+
+ISSUES:
+IN ARTICLE LINKS INSTAGRAM PAGE ISN'T AVAILABLE.----->ISSUE
+CONICAL BURR COFFE GRINDER ---PDP PAGE----> TEXT IS NOT PROPER.
+POP CONTAINERS:SORT---RELEVANCE,LOWEST PRICE,HIGHEST PRICE,NEWEST OVERLAPPING.
+
+
+
+
+27/4/2023
+OXO-firefox
+Issues:
+Home / Shop / Baby & Toddler /
+
+Best Sellers---->loweset price---->out of order....,newest also...
+
+Home / Shop / Baby & Toddler /
+
+On The Go--->colourcheckbox----> click is not working.
+
+Home / Shop / Baby & Toddler /
+
+Best Sellers----->colourcheckbox----> click is not working.
+
+Home / Shop / Baby & Toddler /
+
+On The Go---->Transitions 9 oz Straw Cup Set------>loweset price---->last product price is not mentioned.
+
+Home / Shop / Baby & Toddler /
+
+Cleaning----->loweset price----->price is outof order
+
+Home / Shop / Baby & Toddler /
+
+Cleaning-------->colourcheckbox----> click is not working.
+
+Home / Shop / Baby & Toddler /
+
+Bathing----->Bundle Test---->image is not displayed.--->outof stock
+
+Home / Shop / Baby & Toddler /
+
+Bathing----->colourcheckbox----> click is not working.---->Gray is half round.
+
+Home / Shop / Baby & Toddler /
+
+Feeding & Drinking----->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization /
+
+Best Sellers---->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Home & Office /
+
+Closet Organizers----->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Home & Office /
+
+Containers & Accessories--->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Home & Office /
+
+Mops & Household Brushes---->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Home & Office /
+
+Brooms & Dusters--->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Bathroom /
+
+Shower & Sink--->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Bathroom /
+
+Cleaning Tools---->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Kitchen /
+
+Countertop & Drawer Organizers--->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Kitchen /
+
+Sinkware---->colourcheckbox----> black colour ---> tick mark/click is working & it's not removable & remaining all are not working.--->relavance & remaining(lowest,highest,new,relavance)-->black clour checkbox also not working.
+
+Home / Shop / Cleaning & Organization / Kitchen /
+
+Sponge & Brushes--->lowest-->price is not an order.
+
+Home / Shop / Cleaning & Organization / Kitchen /
+
+Sponge & Brushes-->colourcheckbox----> click is not working.
+
+Home / Shop / Cleaning & Organization / Kitchen /
+
+POP Containers-->colourcheckbox----> click is not working.
+
+Home / Shop / Coffee & Beverage /
+
+On The Go-->colourcheckbox----> click is not working.
+
+Home / Shop / Coffee & Beverage / Barware /
+
+Ice Trays-->colourcheckbox----> click is not working.
+
+Home / Shop / Coffee & Beverage / Barware /
+
+Bar Tools--->colourcheckbox----> click is not working.
+
+Home / Shop / Coffee & Beverage / Coffee & Tea /
+
+Filters & Accessories--->colourcheckbox----> click is not working.
+
+Home / Shop / Coffee & Beverage / Coffee & Tea /
+
+Tea & Kettles-->colourcheckbox----> click is not working.
+
+Home / Shop / Coffee & Beverage / Coffee & Tea /
+
+Coffee Makers & Grinders--->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware /
+
+Outdoor--->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware /
+
+Best Sellers-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Pressure Cooker Tools-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Dessert Tools-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Grill Tools-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Meat & Seafood Tools-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Egg Tools-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Garlic & Herb Tools-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Fruit & Vegetable Tools--->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Salad Tools-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Baking & Pastry Tools-->red/black-->click is working.--->remaining all are not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Colanders, Steamers & Strainers--->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Can & Jar Openers-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Thermometers & Timers-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Tools & Gadgets /
+
+Salt, Pepper & Sugar-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Cooking & Baking /
+
+Bakeware--->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Cooking & Baking /
+
+Cookware-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Cooking & Baking /
+
+Cutting Boards-->colourcheckbox----> click is not working.
+
+Home / Shop / Kitchenware / Cooking & Baking /
+
+Brushes-->no products.
+
+Home / Shop / Kitchenware / Cooking & Baking /
+
+Mixing Bowls-->Blue, Green, Brown -->click is working-->remaining all are not working.
+
+
+
+
+
+10/05/2023
+
+
+Kalyani
+
+Manual Testing on Android Chrome - Hydroflask pre-prod environment
+ 
+home/bottles&drinkware/waterbottles/20 0z wide mouth---->Lowest price is overlapping.&Bundle Test Product image is not displaying(new).&low-high is not an order.  /In Footer section groupCustomization hydroflask homepage images are displaying in plane....no colour like that....
+home/bottles&drinkware/waterbottles-->between price (32-125)--->product price $19.77..but it is outofstock...
+colors option is displaying 2 times.White color checkbox is displaying 2 times.double click on that checkbox it will tickmark.otherwise it will not tick.
+home/bottles&drinkware/cups&tumblers-->20 oz All Around tumbler image is not displaying &12 oz All Around Tumbler image also,10 oz ceramic wine tumbler image also&price is also not displaying and it is outofstock.
+home/bottles&drinkware/cups&tumblers -->6 oz Mug-->price low to high is outoforder & high to low price is also out of order..
+home/bottles&drinkware/bundles--->goji bundles--->image is not displaying.
+home/bottles&drinkware/bundles--->colour option boxes 2 available..
+home/bottles&drinkware/shopall--->128 oz oasis cactus prodct image is not displaying & price is 0 & okpl752 product price is 0.
+home/bottles&drinkware/bundles----->simple with 0 price prodct image is not displaying.
+home/bottles&drinkware/coffee--->12 oz Mug image is not there.
+home/bottles&drinkware/shopAll---->simple with 0 price product image is not displaying & price is 0.
+home/bottles&drinkware/shopall---->12 oz mug ,10 oz ceramic wine tumbler,My Hydro standard flex cap lupine,my hydro wide flex cap strap lupine,My hydro 20 oz tumbler Lupine,20 oz all around tumbler dew,24 oz wide flex chug cap mesa,medium tumbler boot dew,20 0z wide flex chug cap mesa,32 0z wide flex chug cap mesa,64 0z wide flex chug cap mesa,10 oz rocks cactus,half quart bowl cactus---->images are not displaying & price is zero.
+home/kitchenware/outdoor kitchen--->small bottle boot mesa--->price is zero.
+home/kitchenware/outdoor kitchen---->lowest price is out of order & cut and serve platter price is not there.
+home/kitchenware/Food jars---->64 oz wide mouth lupine product image is not displaying.
+3 qt serving bowl with lid -cactus--->image is not displaying.
+Explore-->text is closure.
+
+
+
+Kalyani                                  25-05-2023
+
+Manual Testing on desktop edge - oxo prod environment
+ 
+*   Home / Shop / Kitchenware / Cutlery / Graters & Slicers---------------->color checkboxes not cliking at single time,sometimes removing also & good grips a
+*   Home / Shop / Kitchenware / Tools & Gadgets / Salt, Pepper & Sugar----->when we applying lowestprice filter Sugar Dispenser is an outof order.
+    & oxo-good-grips-classic-wood-salt-pepper-mill-set also.
+*   Home / Shop / Kitchenware / Food Containers / Green Saver--------------->filter is not working(In between price not showing)--transitions-9-oz-straw-cup-set
+*   Home / Shop / Kitchenware / Food Containers / On The Go----------------->filter is not working.
+*   Home / Shop / Baby & Toddler / Feeding & Drinking ------------------>filter is not working.
+*   Home / Shop / Baby & Toddler / Cleaning-------------->filter is not working.
+*   Home / Shop / Baby & Toddler / On The Go------------>filter is not working.
+
+
+Home  Bottles & Drinkware  Water Bottles  32 oz Wide Mouth w/ Straw Lid
+
+
+kalyani                                Drybar --stage
+
+09.06.2023                                      
+
+
+*     services,location and book headerlinks---->not specified yellow bar.
+*     In plp there is no Breadscumbler.
+*     In 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

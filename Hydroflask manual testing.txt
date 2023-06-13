@@ -1,0 +1,43 @@
+Kalyani      10/05/2023
+
+Manual Testing on Android Chrome - Hydroflask pre-prod environment
+ 
+home/bottles&drinkware/waterbottles/20 0z wide mouth---->Lowest price is overlapping.&Bundle Test Product image is not displaying(new).&low-high is not an order.  /In Footer section groupCustomization hydroflask homepage images are displaying in plane....no colour like that....
+home/bottles&drinkware/waterbottles-->between price (32-125)--->product price $19.77..but it is outofstock...
+colors option is displaying 2 times.White color checkbox is displaying 2 times.double click on that checkbox it will tickmark.otherwise it will not tick.
+home/bottles&drinkware/cups&tumblers-->20 oz All Around tumbler image is not displaying &12 oz All Around Tumbler image also,10 oz ceramic wine tumbler image also&price is also not displaying and it is outofstock.
+home/bottles&drinkware/cups&tumblers -->6 oz Mug-->price low to high is outoforder & high to low price is also out of order..
+home/bottles&drinkware/bundles--->goji bundles--->image is not displaying.
+home/bottles&drinkware/bundles--->colour option boxes 2 available..
+home/bottles&drinkware/shopall--->128 oz oasis cactus prodct image is not displaying & price is 0 & okpl752 product price is 0.
+home/bottles&drinkware/bundles----->simple with 0 price prodct image is not displaying.
+home/bottles&drinkware/coffee--->12 oz Mug image is not there.
+home/bottles&drinkware/shopAll---->simple with 0 price product image is not displaying & price is 0.
+home/bottles&drinkware/shopall---->12 oz mug ,10 oz ceramic wine tumbler,My Hydro standard flex cap lupine,my hydro wide flex cap strap lupine,My hydro 20 oz tumbler Lupine,20 oz all around tumbler dew,24 oz wide flex chug cap mesa,medium tumbler boot dew,20 0z wide flex chug cap mesa,32 0z wide flex chug cap mesa,64 0z wide flex chug cap mesa,10 oz rocks cactus,half quart bowl cactus---->images are not displaying & price is zero.
+home/kitchenware/outdoor kitchen--->small bottle boot mesa--->price is zero.
+home/kitchenware/outdoor kitchen---->lowest price is out of order & cut and serve platter price is not there.
+home/kitchenware/Food jars---->64 oz wide mouth lupine product image is not displaying.
+3 qt serving bowl with lid -cactus--->image is not displaying.
+
+Explore-->text is closure.
+
+
+Kalyani      23/05/2023
+
+Manual Testing on Android Chrome - Hydroflask pre-prod environment
+
+* home/bottles &drinkware/bottles---->lowest price and all are overlapping.
+* In homepage Explore categeory------>Text is closure to appear.
+* home/bottles&drinkware/bundles--->colour option boxes 2 available.double click only it will tick..when it removes after single click only it will tick. 
+* home/bottles&drinkware/bottles--->bundle test product image is not displaying.
+* home/bottles&drinkware/waterbottles----->price is not in between order(filter is not working).
+* home/bottles&drinkware/waterbottles----->In colour checkbox when i click on whitecolor it will reduce the color option checkboxes.when it will remove click(tickmark) it will enlarge       color options.
+* home/customize----->20 oz AllcuAround Tumbler product image is not displaying when i click on indigo colour.when i click on black&white color the image is displaying.
+*  home/customize----->lowest price is not an order(12 0z kids wide mouth w/straw lid)
+* home/bottles&drinkware/bundles---->goji bundle image is not displaying.
+* home/featured/new Arrivals----->price is not in between order(filter is not working).
+* In all categeories sorting option is overlapping.
+
+ kalyani             1/06/2023
+Manual Testing on Firefox desktop   -Drybar 
+
